@@ -8,11 +8,15 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+class DevicesViewController: UIViewController {
+    
+    @IBOutlet weak var energyConsumed: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.energyConsumed.text = "textIWant"
     }
 
 

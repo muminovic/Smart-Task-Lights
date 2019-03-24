@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7222EF40224743AB0029EAC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF3F224743AB0029EAC6 /* AppDelegate.swift */; };
-		7222EF42224743AB0029EAC6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF41224743AB0029EAC6 /* FirstViewController.swift */; };
-		7222EF44224743AB0029EAC6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF43224743AB0029EAC6 /* SecondViewController.swift */; };
+		7222EF42224743AB0029EAC6 /* DevicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF41224743AB0029EAC6 /* DevicesViewController.swift */; };
+		7222EF44224743AB0029EAC6 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF43224743AB0029EAC6 /* GraphViewController.swift */; };
 		7222EF47224743AB0029EAC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7222EF45224743AB0029EAC6 /* Main.storyboard */; };
 		7222EF49224743B00029EAC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7222EF48224743B00029EAC6 /* Assets.xcassets */; };
 		7222EF4C224743B00029EAC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7222EF4A224743B00029EAC6 /* LaunchScreen.storyboard */; };
 		7222EF57224743B00029EAC6 /* Smart_Task_LightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF56224743B00029EAC6 /* Smart_Task_LightsTests.swift */; };
 		7222EF62224743B00029EAC6 /* Smart_Task_LightsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF61224743B00029EAC6 /* Smart_Task_LightsUITests.swift */; };
+		7222EF7022474D120029EAC6 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF6F22474D120029EAC6 /* GPSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,8 @@
 /* Begin PBXFileReference section */
 		7222EF3C224743AB0029EAC6 /* Smart-Task-Lights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart-Task-Lights.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7222EF3F224743AB0029EAC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7222EF41224743AB0029EAC6 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7222EF43224743AB0029EAC6 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7222EF41224743AB0029EAC6 /* DevicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesViewController.swift; sourceTree = "<group>"; };
+		7222EF43224743AB0029EAC6 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		7222EF46224743AB0029EAC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7222EF48224743B00029EAC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7222EF4B224743B00029EAC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		7222EF5D224743B00029EAC6 /* Smart-Task-LightsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart-Task-LightsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7222EF61224743B00029EAC6 /* Smart_Task_LightsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Task_LightsUITests.swift; sourceTree = "<group>"; };
 		7222EF63224743B00029EAC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7222EF6F22474D120029EAC6 /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				7222EF3F224743AB0029EAC6 /* AppDelegate.swift */,
-				7222EF41224743AB0029EAC6 /* FirstViewController.swift */,
-				7222EF43224743AB0029EAC6 /* SecondViewController.swift */,
+				7222EF41224743AB0029EAC6 /* DevicesViewController.swift */,
+				7222EF43224743AB0029EAC6 /* GraphViewController.swift */,
+				7222EF6F22474D120029EAC6 /* GPSViewController.swift */,
 				7222EF45224743AB0029EAC6 /* Main.storyboard */,
 				7222EF48224743B00029EAC6 /* Assets.xcassets */,
 				7222EF4A224743B00029EAC6 /* LaunchScreen.storyboard */,
@@ -259,9 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7222EF44224743AB0029EAC6 /* SecondViewController.swift in Sources */,
+				7222EF44224743AB0029EAC6 /* GraphViewController.swift in Sources */,
 				7222EF40224743AB0029EAC6 /* AppDelegate.swift in Sources */,
-				7222EF42224743AB0029EAC6 /* FirstViewController.swift in Sources */,
+				7222EF42224743AB0029EAC6 /* DevicesViewController.swift in Sources */,
+				7222EF7022474D120029EAC6 /* GPSViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
