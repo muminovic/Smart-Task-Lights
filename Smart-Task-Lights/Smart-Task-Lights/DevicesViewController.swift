@@ -8,15 +8,17 @@
 
 import UIKit
 
-class DevicesViewController: UIViewController {
+class DevicesViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var energyConsumed: UILabel!
+    @IBOutlet weak var tableLight: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.energyConsumed.text = "textIWant"
+        print("\(global.energyConsumed) kwh")
+        energyConsumed.text = "\(global.energyConsumed) kwh"
     }
 
 

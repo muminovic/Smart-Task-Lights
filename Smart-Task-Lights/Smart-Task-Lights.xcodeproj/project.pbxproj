@@ -16,6 +16,8 @@
 		7222EF57224743B00029EAC6 /* Smart_Task_LightsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF56224743B00029EAC6 /* Smart_Task_LightsTests.swift */; };
 		7222EF62224743B00029EAC6 /* Smart_Task_LightsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF61224743B00029EAC6 /* Smart_Task_LightsUITests.swift */; };
 		7222EF7022474D120029EAC6 /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7222EF6F22474D120029EAC6 /* GPSViewController.swift */; };
+		72A599F72250AC200014D95A /* AppStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A599F62250AC200014D95A /* AppStruct.swift */; };
+		72A599FB2250B9510014D95A /* LightsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A599FA2250B9510014D95A /* LightsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7222EF61224743B00029EAC6 /* Smart_Task_LightsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_Task_LightsUITests.swift; sourceTree = "<group>"; };
 		7222EF63224743B00029EAC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7222EF6F22474D120029EAC6 /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
+		72A599F62250AC200014D95A /* AppStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStruct.swift; sourceTree = "<group>"; };
+		72A599FA2250B9510014D95A /* LightsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 		7222EF3E224743AB0029EAC6 /* Smart-Task-Lights */ = {
 			isa = PBXGroup;
 			children = (
+				72A599FA2250B9510014D95A /* LightsTableViewController.swift */,
 				7222EF3F224743AB0029EAC6 /* AppDelegate.swift */,
+				72A599F62250AC200014D95A /* AppStruct.swift */,
 				7222EF41224743AB0029EAC6 /* DevicesViewController.swift */,
 				7222EF43224743AB0029EAC6 /* GraphViewController.swift */,
 				7222EF6F22474D120029EAC6 /* GPSViewController.swift */,
@@ -262,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A599FB2250B9510014D95A /* LightsTableViewController.swift in Sources */,
+				72A599F72250AC200014D95A /* AppStruct.swift in Sources */,
 				7222EF44224743AB0029EAC6 /* GraphViewController.swift in Sources */,
 				7222EF40224743AB0029EAC6 /* AppDelegate.swift in Sources */,
 				7222EF42224743AB0029EAC6 /* DevicesViewController.swift in Sources */,
@@ -441,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DT39R52935;
 				INFOPLIST_FILE = "Smart-Task-Lights/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DT39R52935;
 				INFOPLIST_FILE = "Smart-Task-Lights/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
