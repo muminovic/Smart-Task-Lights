@@ -26,13 +26,38 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapping.delegate = self
         
         mapping.requestAlwaysAuthorization()
-    global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.869514, longitude: -122.258879))
-    global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.871997,  longitude: -122.259342))
-    global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.874925,  longitude: -122.257678))
-    global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.871231,  longitude: -122.259275))
+        
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        // Check for Location Services
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+        }
+        //Zoom to user location
+        if let userLocation = locationManager.location?.coordinate {
+            let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 200, longitudinalMeters: 200)
+            mapView.setRegion(viewRegion, animated: false)
+        }
+        
+        self.mapping = locationManager
+        
+        DispatchQueue.main.async {
+            self.mapping.startUpdatingLocation()
+        }
+
+       mapView.showsUserLocation = true
+        
+        global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.869514, longitude: -122.258879))
+        global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.871997,  longitude: -122.259342))
+        global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.874925,  longitude: -122.257678))
+        global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.871231,  longitude: -122.259275))
         
        
     }
+
     
     //for refresh
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +87,7 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func displayLights(){
         mapView.removeAnnotations(mapView.annotations)
         
+        //adding annotations
         for index in 0..<global.mylightLocations.count {
             let annotation = MKPointAnnotation();
             annotation.coordinate = global.mylightLocations[index]
@@ -88,23 +114,12 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }))
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch (status) {
-        case .notDetermined, .denied, .restricted:
-            showAlert()
-        case .authorizedAlways:
-            mapping.startUpdatingLocation()
-        default:
-            print("this is the default")
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        currentLocation = locations.first
-        if(zoomOrNot == true){
-            zoomToLocation()
-            zoomOrNot = false
-        }
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        let location = locations.last as! CLLocation
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        var region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+        region.center = mapView.userLocation.coordinate
+        mapView.setRegion(region, animated: true)
     }
     
     func zoomToLocation() {
