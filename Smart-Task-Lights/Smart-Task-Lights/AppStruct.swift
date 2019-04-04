@@ -24,4 +24,7 @@ struct global {
     //first number is last seen, second number is power consumed in kWh
     static var lightInfo:[[Double]] = [[15,3],[260,1.5],[63, 7.2],[21, 5.2],[83,1.3],[29,4.6]];
     static var lightNames:[String] = ["Kimberly", "Katelyn", "Annabel", "Radhika", "Selma", "Michelle"];
+    
+    //maplocation stuff
+    static var mylightLocations: [CLLocationCoordinate2D] = [];
 }

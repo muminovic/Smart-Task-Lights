@@ -29,12 +29,13 @@ class DevicesViewController: UIViewController, UITableViewDelegate, UITableViewD
         // table constraints
         
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20.0).isActive = true
-        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 350.0).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 370.0).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20.0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100.0).isActive = true
         
-        tableView.layer.borderWidth = 3
-        tableView.layer.borderColor = UIColor.black.cgColor
+        //for border around the table
+        //tableView.layer.borderWidth = 3
+        //tableView.layer.borderColor = UIColor.black.cgColor
         
         // set delegate and datasource
         tableView.delegate = self
