@@ -164,17 +164,35 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T8P-Qc-g7D">
-                                <rect key="frame" x="20" y="127" width="374" height="662"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T8P-Qc-g7D" customClass="g">
+                                <rect key="frame" x="20" y="127" width="374" height="627"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l32-E7-Bgz">
+                                <rect key="frame" x="20" y="762" width="85" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="zoomIn:" destination="u2E-Ns-WcX" eventType="touchUpInside" id="bLN-RP-xDg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfM-3p-sf1">
+                                <rect key="frame" x="278" y="774" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changeMapType:" destination="u2E-Ns-WcX" eventType="touchUpInside" id="Xrc-LM-LHG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rKD-UX-SZn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Locations" id="aas-A0-0wT"/>
                     <connections>
+                        <outlet property="changeMapButton" destination="bfM-3p-sf1" id="wh3-BJ-Qg2"/>
                         <outlet property="mapView" destination="T8P-Qc-g7D" id="gm4-Ij-SrP"/>
+                        <outlet property="zoomToButton" destination="l32-E7-Bgz" id="fV9-X7-rrH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWs-bm-SNY" userLabel="First Responder" sceneMemberID="firstResponder"/>

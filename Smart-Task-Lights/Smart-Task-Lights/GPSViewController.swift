@@ -13,7 +13,9 @@ import AVFoundation
 
 class GPSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
-    
+    @IBOutlet weak var zoomToButton: UIButton!
+    @IBOutlet weak var changeMapButton: UIButton!
+
     //map
     var mapping:CLLocationManager!
     var currentLocation: CLLocation?
@@ -47,17 +49,17 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         DispatchQueue.main.async {
             self.mapping.startUpdatingLocation()
         }
-
-       mapView.showsUserLocation = true
+        
+        mapView.showsUserLocation = true
         
         global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.869514, longitude: -122.258879))
         global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.871997,  longitude: -122.259342))
         global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.874925,  longitude: -122.257678))
         global.mylightLocations.append(CLLocationCoordinate2D(latitude: 37.871231,  longitude: -122.259275))
         
-       
+        
     }
-
+    
     
     //for refresh
     override func viewWillAppear(_ animated: Bool) {
